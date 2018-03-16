@@ -148,6 +148,19 @@
       ^long ^{LongLong {}} mlen
       ^bytes ^{Pinned {}} pk]]
 
+    [^int crypto_sign_ed25519_bytes []]
+    [^int crypto_sign_ed25519_seedbytes []]
+    [^int crypto_sign_ed25519_publickeybytes []]
+    [^int crypto_sign_ed25519_secretkeybytes []]
+    [^int crypto_sign_ed25519_messagebytes_max []]
+    [^int crypto_sign_ed25519_pk_to_curve25519
+     [^bytes ^{Pinned {}} curve25519_pk
+      ^bytes ^{Pinned {}} ed25519_pk]]
+    [^int crypto_sign_ed25519_sk_to_curve25519
+     [^bytes ^{Pinned {}} curve25519_sk
+      ^bytes ^{Pinned {}} ed25519_sk]]
+
+
     [^long ^{size_t {}} crypto_generichash_bytes_min []]
     [^long ^{size_t {}} crypto_generichash_bytes_max []]
     [^long ^{size_t {}} crypto_generichash_bytes []]
@@ -378,6 +391,8 @@
     [^long ^{size_t {}} crypto_scalarmult_bytes []]
     [^long ^{size_t {}} crypto_scalarmult_scalarbytes []]
     [^String crypto_scalarmult_primitive []]
+    [^int crypto_scalarmult_curve25519_bytes []]
+    [^int crypto_scalarmult_curve25519_scalarbytes []]
 
     [^int crypto_scalarmult_base
      [^bytes ^{Pinned {}} q

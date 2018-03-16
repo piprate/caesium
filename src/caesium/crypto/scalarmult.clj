@@ -8,7 +8,9 @@
   (:require [caesium.binding :as b]
             [caesium.byte-bufs :as bb]))
 
-(b/defconsts [bytes scalarbytes primitive])
+(b/defconsts [bytes scalarbytes primitive
+              curve25519_bytes
+              curve25519_scalarbytes])
 
 (defn scalarmult-to-buf!
   "Computes the scalar multiplication of a point into the given output
